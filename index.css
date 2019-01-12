@@ -7,7 +7,6 @@ body{
 .grid-container{
     display: grid;
     grid-template-areas: "content" "footer";
-
 }   
 .header{
     grid-area: footer;
@@ -132,47 +131,24 @@ body{
 /*-----------------------------------CONTACT-----------------------------------*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-@media only screen and (min-width: 500px){
+@media only screen and (min-width: 900px){
     body{
         padding: 0;
         margin: 0;
         font-family: 'Open Sans', sans-serif;
-        height: 100vh;
-        width: 100vw;
     }
 
     .grid-container{
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto 1fr 1fr;
+        grid-template-areas: "header" "content" "footer";
     }
 
-
     .header{
+        grid-area: header;
         display: grid;
         grid-template-columns: 50% 5% 5% 5% 5% 15%;
+        grid-template-areas: "name work about contact download-cv";
         line-height: 2.5;
         align-items: center;
         background-color: #f5f5f5;
@@ -180,15 +156,15 @@ body{
         top:0;
     }
 
-
     #name{
-        grid-column: 1;
+        grid-area: name;
+        display: block;
         font-size: 1.1em;
         font-weight: 400;
         padding: 0 0 0 300px;
     }
 
-    #page-link{
+    .page-link{
         text-align: center;
         font-size: 1em;
         font-weight: 300;
@@ -197,20 +173,22 @@ body{
             border-radius: 5px;
     }
 
-    #page-link:hover{
+    .page-link:hover{
         cursor: pointer;
         opacity: 1;
         border: 1px solid #c9dcff;
 
     }
 
-    #page-link:active{
+    .page-link:active{
         color: black;
         transition: 200ms;
         border: 1px solid #639aff;
     }
 
+    
     #download-cv{
+        grid-area: download-cv;
         grid-column: 6;
         line-height: 2;
         text-decoration: none;
@@ -237,14 +215,8 @@ body{
         border: 1px solid #3e82ff;
     }
 
-    .content{
-        display: grid;
-        grid-template-rows: auto auto auto;
-        grid-column: auto;
-    }
-
     .block-title{
-        grid-column: 1 / 3;
+        grid-area: block-title;
         line-height: 1;
         font-size: 2em;
         font-weight: 300;
@@ -257,10 +229,12 @@ body{
         grid-template-columns: 500px 500px;
         grid-template-rows: auto 350px;
         grid-gap:20px;
+        grid-template-areas: 
+            "block-title block-title"
+            "bus gover";
         justify-content: center;
         margin-top: 20px;
     }
-
 
     .project{
         height: 100%;
@@ -296,6 +270,7 @@ body{
         background-color: #c1d6ff;
         text-transform: uppercase;
         color: #4b6a86;
+        border-radius: 10px;
     }
     .project-descr{
         grid-row: 4;
@@ -322,13 +297,19 @@ body{
 
     #about{
         display:grid;
-        grid-template-columns: 500px 500px;
-        grid-template-rows: auto 1fr;
+        grid-template-columns: 1000px;
+        grid-template-rows: auto 350px;
         justify-content: center;
+
     }
-*/
+    
+    #contact{
+        display:grid;
+        grid-template-columns: 1000px;
+        grid-template-rows: auto 350px;
+        justify-content: center;
 
-
+    }
 }
 
 
