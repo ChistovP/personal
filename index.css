@@ -8,16 +8,15 @@ body{
 .grid-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 100px;
+    grid-template-rows: 100vh;
     grid-template-areas: "content" "footer";
-    height: 100vh;
+
 }   
 .header{
     grid-area: footer;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    line-height: 2.5;
     align-items: center;
     background-color: #f5f5f5;
     position: sticky;
@@ -42,14 +41,14 @@ body{
 #page-link:hover{
     cursor: pointer;
     opacity: 1;
-    border: 1px solid #c9dcff;
+
 
 }
 
 #page-link:active{
     color: black;
     transition: 200ms;
-    border: 1px solid #639aff;
+
 }
 
 #download-cv{
@@ -66,21 +65,12 @@ body{
     font-weight: 400;
 }
 
-#download-cv:hover{
-    transition: 200ms;
-    cursor: pointer;
-    line-height: 2.5;
-    border: 1px solid #3e82ff;
-    color: #003386;
-    border-radius: 5px;
-
-}
-
 #download-cv:active{
     border: 1px solid #3e82ff;
 }
 /*-----------------------------------CONTENT-----------------------------------*/
 .content{
+    grid-area: content;
     display: grid;
     grid-template-rows: auto auto auto;
     grid-column: auto;
