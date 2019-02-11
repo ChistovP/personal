@@ -6,7 +6,9 @@ body{
 
 .grid-container{
     display: grid;
-    grid-template-areas: "content" "footer";
+    grid-template-areas: 
+        "content" 
+        "footer";
 }   
 .header{
     grid-area: footer;
@@ -45,33 +47,23 @@ body{
 }
 
 #download-cv{
-    line-height: 3;
-    grid-area: download-cv;
-    text-decoration: none;
-    background-color: #e8f0ff;
-    border-top: 1px solid #7facff;
 
-    text-align: center;
-    color: #426db4;
-    font-size: 0.9em;
-    font-weight: 400;
 }
 
 #download-cv:active{
     border: 1px solid #3e82ff;
 }
-/*-----------------------------------CONTENT-----------------------------------*/
+
 .content{
 
 }
-/*-----------------------------------WORK-----------------------------------*/
+
 .block-title{
         grid-area: block-title;
         line-height: 1;
         font-size: 2em;
         font-weight: 300;
         text-align: right;
-        opacity: 0.3;
         padding-right: 10px;
     }
 
@@ -97,6 +89,22 @@ body{
 
 #gover{
     grid-area:  gover; 
+}
+
+#about{
+    display:grid;
+    grid-gap:20px;
+    justify-content: center;
+    grid-template-areas: 
+        "block-title";
+}
+
+#contact{
+    display:grid;
+    grid-gap:20px;
+    justify-content: center;
+    grid-template-areas: 
+        "block-title";
 }
 
 .project-title{
@@ -152,14 +160,15 @@ body{
     .header{
         grid-area: header;
         display: grid;
-        grid-template-columns: 40% 10% 10% 10% 15%;
+        grid-template-columns: 50% 5% 5% 5% 10%;
         grid-column-gap: 10px;
         grid-template-areas: "name work about contact download-cv";
         line-height: 3;
         align-items: center;
-        background-color: #f0f0f0;
+        background-color: white;
         position: sticky;
         top:0;
+
     }
 
     #name{
@@ -176,44 +185,41 @@ body{
         font-weight: 300;
         opacity: 0.6;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 0px;
     }
 
     .page-link:hover{
         cursor: pointer;
         opacity: 1;
-        border: 1px solid #c9dcff;
-
+        border: 1px solid lightgrey;
     }
 
     .page-link:active{
         color: black;
         transition: 200ms;
-        border: 1px solid #639aff;
+        border: 1px solid grey;
     }
 
     
     #download-cv{
+        transition: 200ms;
         grid-area: download-cv;
         line-height: 2.5;
         text-decoration: none;
-        background-color: #e8edff;
-        border: 1px solid #7facff;
-        border-radius: 5px;
+        background-color: #f9f9f9;
+        border: 1px solid white;
         text-align: center;
-        color: #426db4;
         font-size: 0.9em;
         font-weight: 400;
     }
 
     #download-cv:hover{
-        transition: 100ms;
+        transition: 200ms;
         cursor: pointer;
-        border: 1px solid #3e82ff;
         color: #003386;
         border-radius: 0px;
-        line-height: 3;
-
+        border: 1px solid lightgrey;
+        background-color: white;
     }
 
     #download-cv:active{
@@ -295,7 +301,7 @@ body{
         font-size: 1em;
         font-weight: 300;
         padding: 0 0 0 20px;
-        margin: 20px;
+        margin: 20px 20px 20px 0;
         opacity: 0;
         transition: 200ms;
         text-align: left;
