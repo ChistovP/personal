@@ -47,7 +47,9 @@ body{
 }
 
 #download-cv{
-
+    grid-column: 1/5;
+    text-align: center;
+    text-decoration: none;
 }
 
 #download-cv:active{
