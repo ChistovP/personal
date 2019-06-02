@@ -86,7 +86,8 @@ html {
     grid-template-areas: 
         "block-title"
         "bus"
-        "gover";
+        "gover"
+        "secretgame";
     grid-row-gap:20px;
     justify-content: center;
 }
@@ -108,7 +109,9 @@ html {
 #gover{
     grid-area:  gover; 
 }
-
+#secretgame{
+    grid-area:  secretgame; 
+}
 #about{
     display:grid;
     grid-gap:20px;
@@ -377,8 +380,9 @@ html {
             "block-title block-title  block-title"
             "bus bus bus"
             "gover gover gover"
+            "secretgame secretgame secretgame"
             "cards player space"
-            "christmas more empty";
+            "christmas more1 more2";
         justify-content: center;
         margin: 0;
     }
@@ -446,7 +450,8 @@ html {
     }
 
     #cards,
-    #more,
+    #more1,
+    #more2,
     #player,
     #space,
     #christmas{
@@ -466,7 +471,8 @@ html {
     }
 
     #cards .project-title,
-    #more .project-title,
+    #more1 .project-title,
+    #more2 .project-title,
     #player .project-title,
     #space .project-title,
     #christmas .project-title{
@@ -476,7 +482,8 @@ html {
         margin: 0 10px 0 10px;
         text-align: center;
     }
-    #more .project-tags,
+    #more1 .project-tags,
+    #more2 .project-tags,
     #cards .project-tags,
     #player .project-tags,
     #space .project-tags,
@@ -486,7 +493,7 @@ html {
         text-align: center;
         margin: 0 10px 0 10px;
     }
-    #more .project-descr,
+
     #cards .project-descr,
     #player .project-descr,
     #space .project-descr,
@@ -501,7 +508,9 @@ html {
         opacity: 1;
     }
 
-    #more .status,
+
+    #more1 .status,
+    #more2 .status,
     #cards .status,
     #christmas .status{
         grid-column: 1/3;
@@ -534,7 +543,7 @@ html {
     #space:hover .project-descr,
     #christmas:hover .project-descr{
         opacity: 1;
-        transition: 200ms;
+        transition: 100ms;
         margin: 0;
         width: 100%;
         height: auto;
@@ -551,12 +560,11 @@ html {
     #space:hover .status,
     #christmas:hover .status{
         opacity: 1;
-        transition: 200ms;
+        transition: 100ms;
         z-index: 10;
         margin:0 30px 0 30px;
-        align-items: center;
+        align-items: flex-end;
     }
-    #more .status::after,
     #cards .status::after,
     #player .status::after,
     #space .status::after,
@@ -570,7 +578,6 @@ html {
         margin: 0 0 0 5px;
         padding: 0 0 0 0;
     }
-    #more .status:active,
     #cards .status:active,
     #player .status:active,
     #space .status:active,
@@ -578,11 +585,17 @@ html {
         margin-top: 5px;
         background-color: #3f8326;
     }
-
-
-    #more{
-        grid-area:more;
+    
+    #more1 .project-tags,
+    #more2 .project-tags{
+        grid-column: 1/5;
     }
+    
+    #more1 .project-title,
+    #more2 .project-title{
+        grid-column: 1/5;
+    }
+
     #player{
         grid-area:player;
     }
@@ -592,6 +605,12 @@ html {
     #christmas{
         grid-area:christmas;
 
+    }
+    #more1{
+        grid-area: more1;
+    }
+    #more2{
+        grid-area: more2;
     }
 
     .project:hover{
