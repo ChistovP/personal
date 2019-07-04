@@ -168,7 +168,10 @@ html {
     line-height: 2;
     margin: 10px;
 }
-
+#secretgame a{
+    color: white;
+    text-decoration: none;
+}
 .project-descr{
     grid-row: 4;
     margin: 0 15px 0 15px;
@@ -192,12 +195,13 @@ html {
     opacity: 0;
     transition: 200ms;
 }
+
 .project:hover .project-descr{
     opacity: 1;
     transition: 200ms;
     margin-left: 0;
 }
-    
+
 .about-general{
     margin: 0 20px 0 20px;
     text-align: justify;
@@ -408,11 +412,11 @@ html {
         grid-gap:20px;
         grid-template-areas: 
             "block-title block-title  block-title"
-            "bus bus bus"
-            "gover gover gover"
             "secretgame secretgame secretgame"
-            "cards player space"
-            "christmas more1 more2";
+            "gover gover gover"
+            "bus bus bus"
+            "more2 more1 cards"
+            "player space christmas";
         justify-content: center;
         margin: 0;
     }
@@ -760,6 +764,29 @@ html {
     #artstation{
 
     }
+    
+#secretgame .status-dev{
+    background-color: #8296be;
+}
+#secretgame:hover .status-dev{
+    opacity:1;
+    background-color: #65779d;
+}
+    
+#secretgame .status-dev:after{
+    content: "";
+    background-image: url("assets/external-link.png");
+            background-size: 100% auto;
+        display: inline-block;
+        width: 0.8em; 
+        height: 0.8em;
+        margin: 0 0 0 5px;
+        padding: 0 0 0 0;
+}
+    
+#secretgame:hover .project-descr{
+    opacity:0;
+}
 
     
 }
