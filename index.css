@@ -86,8 +86,7 @@ html {
     grid-template-areas: 
         "block-title"
         "bus"
-        "gover"
-        "secretgame";
+        "gover";
     grid-row-gap:20px;
     justify-content: center;
 }
@@ -253,7 +252,7 @@ html {
 #artstation{
 
 }
-
+#more1 .status,
 #cards .status,
 #christmas .status{
     text-decoration: none;
@@ -266,25 +265,28 @@ html {
     color:white;
     background-color: ;
 }
+#more1 .project-descr,
 #cards .project-descr,
 #player .project-descr,
 #space .project-descr,
 #christmas .project-descr{
     display: none;
 }
-    #cards .status::after,
-    #player .status::after,
-    #space .status::after,
-    #christmas .status::after{
-        content: "";
-        background-image: url("assets/external-link.png") ;
-        background-size: 100% auto;
-        display: inline-block;
-        width: 0.8em; 
-        height: 0.8em;
-        margin: 0 0 0 5px;
-        padding: 0 0 0 0;
-    }
+#more1 .status::after,
+#cards .status::after,
+#player .status::after,
+#space .status::after,
+#christmas .status::after{
+    content: "";
+    background-image: url("assets/external-link.png") ;
+    background-size: 100% auto;
+    display: inline-block;
+    width: 0.8em; 
+    height: 0.8em;
+    margin: 0 0 0 5px;
+    padding: 0 0 0 0;
+}
+#more1: hover .status,
 #cards:hover .status,
 #player:hover .status,
 #space:hover .status,
@@ -386,6 +388,7 @@ html {
     
     
     
+
     
     .block-title{
         grid-area: block-title;
@@ -412,11 +415,10 @@ html {
         grid-gap:20px;
         grid-template-areas: 
             "block-title block-title  block-title"
-            "secretgame secretgame secretgame"
             "gover gover gover"
             "bus bus bus"
-            "more2 more1 cards"
-            "player space christmas";
+            "more1 cards player"
+            "space christmas empty";
         justify-content: center;
         margin: 0;
     }
@@ -541,7 +543,7 @@ html {
         text-align: center;
         margin: 0 10px 0 10px;
     }
-
+    #more1 .project-descr,
     #cards .project-descr,
     #player .project-descr,
     #space .project-descr,
@@ -570,6 +572,7 @@ html {
         background:rgba(63, 70, 101, 0.9);
         text-transform: none;
         padding: 30px;
+        z-index: 1000;
     }    
     #player .status,
     #space .status{
@@ -582,12 +585,13 @@ html {
         background:rgba(63, 70, 101, 0.9);
         text-transform: none;
         padding: 30px;
+        z-index: 1000;
     }
     #behance-project{
         background-color: #8296be;
     }
 
-    #more:hover .project-descr,
+    #more1:hover .project-descr,
     #cards:hover .project-descr,
     #player:hover .project-descr,
     #space:hover .project-descr,
@@ -598,13 +602,14 @@ html {
         width: 100%;
         height: auto;
     }    
-    #more:hover .project-tags,    #more:hover .project-title,
+    #more1:hover .project-tags,    #more1:hover .project-title,
     #cards:hover .project-tags,    #cards:hover .project-title,
     #player:hover .project-tags,    #player:hover .project-title,
     #space:hover .project-tags,    #space:hover .project-title,
     #christmas:hover .project-tags,    #christmas:hover .project-title{
         opacity: 0;
     }
+    #more1:hover .status,
     #cards:hover .status,
     #player:hover .status,
     #space:hover .status,
@@ -614,6 +619,7 @@ html {
         z-index: 10;
         align-items: center;
     }
+    #more1 .status::after,
     #cards .status::after,
     #player .status::after,
     #space .status::after,
@@ -627,6 +633,7 @@ html {
         margin: 0 0 0 5px;
         padding: 0 0 0 0;
     }
+     #more1 .status:active,
     #cards .status:active,
     #player .status:active,
     #space .status:active,
@@ -637,12 +644,12 @@ html {
     
     #more1 .project-tags,
     #more2 .project-tags{
-        grid-column: 1/5;
+        /*grid-column: 1/5;*/
     }
     
     #more1 .project-title,
     #more2 .project-title{
-        grid-column: 1/5;
+        /*ggrid-column: 1/5;*/
     }
 
     #player{
