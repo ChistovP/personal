@@ -6,11 +6,10 @@ body{
 html {
   scroll-behavior: smooth;
 }
-
 .grid-container{
     display: grid;
     grid-template-areas:
-        "pavel"
+        "hero"
         "content" 
         "footer";
 }   
@@ -20,21 +19,101 @@ html {
     grid-template-areas: 
         "work about download-cv";
     background-color: #f5f5f5;
-    z-index: 10;
     position: sticky;
     bottom: 0;
     z-index: 100;
+        font-family: 'Barlow';
+}
+/*-----HERO------*/
+.hero{
+    text-align: center;
+    grid-area: hero;
+    display: grid;
+    align-items: center;
+    grid-template-columns: min-height(300px);
+    margin: 20px 20px 0px 20px;
+    font-family: 'Barlow';
+}
+.hero img{
+    grid-row: 1;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.hero .hero-text{
+    grid-row:2;
+    text-align: left;
+    margin: 0;
+    display: grid;
+    grid-auto-rows: auto;
+    align-items: center;
+}
+.hero .hero-hi{
+    font-size: 2em;
+    padding:0;
+    margin:  0;
+    font-weight: bold;
+}
+.hero .hero-descr{
+    font-size: 2em;
+    padding:0;
+    margin: 0;
+    font-weight: 300;
+}
+.hero .hero-more{  
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+    background-color: #2f4672;
+    padding: 10px;
+    margin: 10px 0 0 0;
 }
 
+
+.recommendation{
+    background-color: #f9f9f9;
+    margin: 0 20px 20px 20px;
+}
+.recommendation-text{
+    padding: 20px;
+    margin: 0;
+    font-size: 0.8em;
+    text-align: justify;
+}
+.recommendation-referal{
+    padding: 10px 10px 0px 10px;
+    margin:0;
+    font-size: 0.8em;
+    text-align:right;
+    color: black;
+    font-weight: bold;
+    opacity: 0.5;
+    background-color: white;
+}
+/*---------------*/
 #name{
     display: none;
+    text-decoration: none;
+    color:black;
 }
-#name-global
+
+#name-mobile
 {
+    display: none;
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 0;
     padding-bottom: 0;
+    text-decoration: none;
+    color:black;
+
+}
+#name a
+{
+    text-decoration: none;
+    color:black;
+
 }
 .page-link{
     line-height: 3;
@@ -67,53 +146,262 @@ html {
 #download-cv:active{
     border: 1px solid #3e82ff;
 }
-
-.content{
-
-}
-
 .block-title{
-        grid-area: block-title;
-        line-height: 1;
-        font-size: 2em;
-        font-weight: 300;
-        text-align: right;
-        padding-right: 10px;
-    }
+    grid-area: block-title;
+    line-height: 1;
+    font-size: 2em;
+    font-weight: 300;
+    text-align: center;
+    opacity: 0.3;
+        font-family: 'Barlow';
+}
+.block-title{
+    grid-area: block-title;
+    line-height: 1;
+    font-size: 2em;
+    font-weight: 300;
+    text-align: center;
+    opacity: 0.3;
+        font-family: 'Barlow';
+}
 
 #work{
     display:grid;
     grid-template-areas: 
         "block-title"
+        "gover"
         "bus"
-        "gover";
+        "ships"
+        "space"
+        "player"
+        "christmas"
+        "cards";
     grid-row-gap:20px;
-    justify-content: center;
+   /* justify-content: center;*/
+    margin: 0 20px 0 20px;
+    grid-column-gap: 0;
 }
 
 .project{
     background-color: #f9f9f9;
-        display: grid;
-    grid-auto-rows: auto;
-    grid-template-columns: 100%;
+    display: grid;
+    grid-template-columns: 72px auto;
+    grid-template-rows: 36px 36px 36px auto;
     text-align: center;
     align-items: center;
-    /*border: 1px solid #c1d6ff;*/
+    padding: 0;
+    margin:0;
 }
 
 #bus{
     grid-area:  bus;
 }
+/*#space{
+    grid-area:  spacelog; 
+}
+#cards{
+    grid-area:  cards; 
+}
+#christmas{
+    grid-area:  christmas; 
+}
+#ships{
+    grid-area:  ships; 
+}
+#player{
+    grid-area:  player; 
+}*/
 
-#gover{
-    grid-area:  gover; 
+
+
+.project-icon{
+    grid-column: 1;
+    grid-row: 1/3;
+    height: 72px;
+    width: 72px;
+    padding: 0;
+    margin: 0;
 }
-#secretgame{
-    grid-area:  secretgame; 
+.project-icon .special-icon{
+    margin: 0;
+    padding: 0;
+    width: 72px;
+    height: 72px;
+    opacity: 0.2;
 }
+.project .project-tiles{
+    width: 300px;
+    height: 150px;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    grid-column: 1/3;
+    grid-row: 3;
+    display: none;
+}
+
+.project-title{
+    grid-column: 2;
+    grid-row:1;
+    text-align: left;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 0;
+    margin: 20px 0 0 10px;
+}
+
+.project-tags{
+    grid-column: 2;
+    grid-row:2;
+    text-align: left;
+    font-size: 0.5em;
+    padding: 0;
+    margin: 0 0 20px 10px;
+    opacity: 0.4;
+}
+.project-descr-icon{
+    width: 72px;
+    height: 36px;
+    grid-column: 1;
+    grid-row:3;
+}
+.project-descr-icon img{
+    width: 72px;
+    height: 36px;
+    opacity: 0.2;
+}
+.project-descr{
+    grid-column: 2;
+    grid-row:3;
+    text-align: left;
+    font-size: 0.6em;
+    font-weight: 300;
+    margin: 0 20px 0 10px;
+}
+.project-link{
+    grid-column: 1/3;
+    grid-row:4;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    font-size: 0.6em;
+    text-decoration: none;
+    color:#3e6f7f;
+    border: 2px solid #e0eef5;
+   /* background-color: #e0eef5;*/
+    padding: 10px 0 10px 0;
+    margin: 10px 10px 10px 10px;
+
+}
+.project-link:hover{
+    /*background-color: #a5c8d9; */
+    border: 2px solid #c4ced3;
+    transition: 200ms;
+}
+
+
+
+
+
+.small-project{
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 25px 25px 25px;
+    text-align: center;
+    align-items: center;
+}
+
+.small-project .project-icon{
+    grid-column: 1;
+    grid-row: 1/4;
+    width: 150px;
+    height: 75px;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto;
+}
+.small-project .project-icon a{
+    grid-row:1;
+    grid-column: 1;
+}
+.small-project .project-icon .project-icon-img img{
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 75px;
+    opacity: 0;
+
+}
+
+
+.small-project .project-icon  .project-icon-img-svg img{
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 75px;
+    opacity: 0.6;
+
+}
+
+
+.small-project .project-title{
+    grid-column: 2;
+    grid-row:1;
+    text-align: left;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 0;
+    margin: 10px 0 0 10px;
+}
+
+.small-project .project-tags{
+    grid-column: 2;
+    grid-row:2;
+    text-align: left;
+    font-size: 0.5em;
+    padding: 0;
+    margin: 0 0 10px 10px;
+}
+.small-project .project-link{
+    grid-column: 2/3;
+    grid-row:3;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.5em;
+    text-decoration: none;
+    color:#3e6f7f;
+    /*background-color: #c4e4f4;*/
+    padding: 5px 0 5px 0;
+    margin: 5px 10px 20px 10px;
+
+    border: 1px solid #e0eef5;
+
+}
+.small-project .project-link:hover{
+   /* background-color: #a5c8d9; */
+    border: 1px solid #c4ced3;
+    transition: 200ms;
+}
+
+.small-project .project-link::after{
+    content: "";
+    background-image: url("assets/link.svg") ;
+    background-size: 100% auto;
+    display: inline-block;
+    width: 0.8em; 
+    height: 0.8em;
+    margin: 0 0 0 5px;
+    padding: 0 0 0 0;
+    opacity: 0.5;
+}
+
+
 #about{
     display:grid;
-    grid-gap:20px;
+
     justify-content: center;
     grid-template-areas: 
         "block-title";
@@ -121,90 +409,20 @@ html {
 
 #contact{
     display:grid;
-    grid-gap:20px;
+
     justify-content: center;
     grid-template-areas: 
         "block-title"
         "email linkedin artstation behance";
 }
 
-.project-title{
-    grid-row: 2;
-    font-size: 1.5em;
-    font-weight: 400;
-    text-transform: uppercase;
-    vertical-align: bottom;
-        margin: 0 10px 0 10px;
-}
-.project-tags{
-        grid-row: 1;
-    font-size: 0.9em;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin: 10px;
-}
-.status{
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 300;
-    background-color: #8296be;
-    text-transform: uppercase;
-    color: white;
-    grid-column: 1/3;
-    grid-row: 3;
-    line-height: 2;
-    margin: 10px;
-}
-.status-dev{
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 300;
-    background-color: #a2a2a2;
-    text-transform: uppercase;
-    color: white;
-    grid-column: 1/3;
-    grid-row: 3;
-    line-height: 2;
-    margin: 10px;
-}
-#secretgame a{
-    color: white;
-    text-decoration: none;
-}
-.project-descr{
-    grid-row: 4;
-    margin: 0 15px 0 15px;
-    font-size: 0.8em;
-    font-weight: 300;
-    opacity: 0;
-    margin: 10px;
-    opacity: 0;
-    grid-column: 1/3;
-        grid-row: 3;
-}
-.project:hover{
-    cursor: pointer;
-    transition: 200ms;
-}
-.project:hover .status{
-    opacity: 0;
-    transition: 200ms;
-}
-.project:hover .status-dev{
-    opacity: 0;
-    transition: 200ms;
-}
-
-.project:hover .project-descr{
-    opacity: 1;
-    transition: 200ms;
-    margin-left: 0;
-}
 
 .about-general{
     margin: 0 20px 0 20px;
     text-align: justify;
+    justify-content: center;
 }    
+
 .about-contacts{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -212,12 +430,12 @@ html {
     grid-column-gap: 15px; 
     grid-row-gap: 15px;
     text-align: center;
-    margin: 50px 0 50px 0;
+    margin: 0 20px 0 20px;
 }
 .about-contacts a{
     text-decoration: none;
     font-size: 1.1em;
-    transition: 200ms;
+
     padding: 10px 0 10px 0;
     margin: 0;
     color: black;
@@ -235,7 +453,7 @@ html {
     padding: 0;
     font-size: 2em;
     font-weight: 300;
-    padding: 50px 0 0 0;
+    padding: 20px 0 0 0;
 }
 #email{
     grid-column: 1/4;
@@ -245,54 +463,7 @@ html {
     color:#1a408b;
     font-weight: 300;
 }
-#linkedin{
 
-
-}
-#artstation{
-
-}
-#more1 .status,
-#cards .status,
-#christmas .status{
-    text-decoration: none;
-    color:white;
-    background-color: #8296be;
-}
-#player .status,
-#space .status{
-    text-decoration: none;
-    color:white;
-    background-color: ;
-}
-#more1 .project-descr,
-#cards .project-descr,
-#player .project-descr,
-#space .project-descr,
-#christmas .project-descr{
-    display: none;
-}
-#more1 .status::after,
-#cards .status::after,
-#player .status::after,
-#space .status::after,
-#christmas .status::after{
-    content: "";
-    background-image: url("assets/external-link.png") ;
-    background-size: 100% auto;
-    display: inline-block;
-    width: 0.8em; 
-    height: 0.8em;
-    margin: 0 0 0 5px;
-    padding: 0 0 0 0;
-}
-#more1: hover .status,
-#cards:hover .status,
-#player:hover .status,
-#space:hover .status,
-#christmas:hover .status{
-    opacity: 1;
-}
 
 /*-----------------------------------ABOUT-----------------------------------*/
 
@@ -311,6 +482,7 @@ html {
         grid-template-rows: 90px 1fr;
         grid-template-areas: 
             "header" 
+            "hero"
             "content";
     }
     .header{
@@ -323,8 +495,52 @@ html {
         background-color: white;
         position: sticky;
         top:0;
-            z-index: 100;
+        z-index: 100;
     }
+    /*-----HERO------*/
+    .hero{
+        text-align: center;
+        grid-area: hero;
+        display: grid;
+        grid-template-columns: 1030px;
+        grid-template-rows: 400px;
+        justify-content: center;
+        align-items:center;
+        margin: 0;
+    }
+    .hero .hero-text{
+        grid-row:1;
+        grid-column: 1;
+    }
+    .hero .hero-hi{
+        font-size: 4em;
+        padding:0;
+        font-weight: bold;
+        text-align: left;
+    }
+    .hero .hero-descr{
+
+        font-size: 2em;
+        padding:0;
+        font-weight: 300;
+        text-align: left;
+    }
+    .hero .hero-more{  
+        font-size: 1em;
+        text-decoration: none;
+        color: white;
+        background-color: #2f4672;
+        padding: 20px;
+        text-transform: uppercase;
+        border: 1px solid #2f4672;
+    }
+    .hero .hero-more:hover{  
+        transition: 200ms;
+        background-color: white;
+        border: 1px solid lightgrey;
+        color:black;
+    }
+    /*---------------*/
     #name{
         grid-column: 2;
         display: block;
@@ -360,7 +576,7 @@ html {
         grid-column: 5;
     }
     #download-cv{
-        transition: 200ms;
+
         grid-column: 6;
         margin: 0;
         padding: 0 10px 0 10px;
@@ -374,7 +590,7 @@ html {
         color:#8296be;
     }
     #download-cv:hover{
-        transition: 200ms;
+  
         cursor: pointer;
         color: #003386;
         border-radius: 0px;
@@ -392,12 +608,10 @@ html {
     
     .block-title{
         grid-area: block-title;
-        line-height: 1;
         font-size: 2em;
         font-weight: 300;
-        text-align: right;
-        opacity: 0.6;
-        width: 900px;
+        text-align: center;
+        opacity: 0.3;
         margin: 0;
     }
         
@@ -410,281 +624,235 @@ html {
     
     #work{
         display:grid;
-        grid-template-columns: 300px 300px 300px;
+        grid-template-columns: 500px 500px;
         grid-template-rows: auto;
-        grid-gap:20px;
+        grid-gap:30px;
         grid-template-areas: 
-            "block-title block-title  block-title"
-            "gover gover gover"
-            "bus bus bus"
-            "more1 cards player"
-            "space christmas empty";
+            "block-title block-title"
+            "gover bus"
+            "ships space"
+            "player christmas"
+            "cards cards";
         justify-content: center;
         margin: 0;
     }
+
+    
+
 
     .project{
-        height: 100%;
         background-color: #f9f9f9;
-        border-radius: 0px;
         display: grid;
-        grid-auto-rows: 70px;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 90px 1fr;
+        grid-template-rows: 45px 45px auto auto;
         text-align: center;
         align-items: center;
+        margin: -32px 0 0 0;
     }
-    .project-title{
+
+    .project-icon{
         grid-column: 1;
-        grid-row: 2;
-        font-size: 1.2em;
-        font-weight: 400;
-        text-transform: uppercase; 
+        grid-row: 1/3;
+        height: 90px;
+        width: 90px;
+        padding: 0;
+        margin: 0;
+    }
+    .project-icon img{
         margin: 0;
         padding: 0;
-        align-self:baseline;
+        height: 90px;
+        width: 90px;
+        opacity: 0.2;
+
     }
+
+    .project:hover .project-icon img{
+        opacity: 0.5;
+        transition:200ms;
+    }    
+
+    .project-title{
+        grid-column: 2;
+        grid-row:1;
+        text-align: left;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        font-weight: bolder;
+        padding: 0;
+        margin: 20px 0 0 10px;
+    }
+
     .project-tags{
+        grid-column: 2;
+        grid-row:2;
+        text-align: left;
+        font-size: 0.8em;
+        padding: 0;
+        margin: 0 0 20px 10px;
+        opacity: 0.4;
+    }
+    
+    .project .project-tiles{
+        width: 500px;
+        height: 250px;
+        margin: 0;
+        padding: 0 0 5px 0;
+        grid-column: 1/3;
+        grid-row: 3;
+        display: block;
+        opacity: 0.7;
+
+    }
+    
+    .project:hover .project-tiles{
         opacity: 1;
+        transition: 200ms;
+    }
+    .project-descr-icon{
         grid-column: 1;
-        grid-row: 1;
+        grid-row:4;
+        width: 90px;
+        height: 45px;
+        margin: 0;
+        padding: 0;
+
+    }
+    .project-descr-icon img{
+        width: 90px;
+        height: 45px;
+        opacity: 0.2;
+        margin:0;
+        padding: 0;
+    }
+        
+    .project:hover .project-descr-icon img{
+        opacity: 0.5;
+        transition: 200ms;
+    }
+    
+    .project-descr{
+        grid-column: 2;
+        grid-row:4;
+        text-align: left;
         font-size: 0.9em;
         font-weight: 300;
-        color:#8296be;
-        margin: 0;
-        padding: 0;
-        text-transform: uppercase;
-        align-self:flex-end;
+        margin: 0 20px 0 10px;
+        padding: 5px 0 10px 0;
+        line-height: 1.3;
     }
-    .status{
-        grid-row: 1/3;
-        grid-column:2;
-        font-size: 1.2em;
-        font-weight: 300;
-        text-transform: uppercase;
-        color: white;
-        margin: 0 40px 0 40px;
-        padding: 10px 0 10px 0;
-        transition: 200ms;
-        border-radius: 0;
-        opacity: 1;
-    }
-    .status-dev{
-        grid-row: 1/3;
-        grid-column: 2;
-        font-size: 1.2em;
-        font-weight: 300;
-        background-color: #a2a2a2;
-        text-transform: uppercase;
-        color: white;
-        margin: 0 40px 0 40px;
-        padding: 10px 0 10px 0;
-        transition: 200ms;
-        border-radius: 0;
-        opacity: 1;
-    }
-    #behance-project{
-        background-color: #8296be;
-    }
-    .project-descr{
-        grid-row: 1/3;
-        grid-column:2;
+    .project-link{
+        grid-column: 1/3;
+        grid-row:5;
+        text-align: center;
+        font-weight: bold;
         font-size: 1em;
-        font-weight: 300;
-        padding: 0 0 0 20px;
-        margin: 20px 20px 20px 20px;
-        opacity: 0;
+        text-decoration: none;
+        color:#3e6f7f;
+        /*background-color: #e0eef5;*/
+        border: 1px solid #e0eef5;
+        padding: 10px 0 10px 0;
+        margin: 10px 20px 20px 20px;
+
+    }
+    .project-link:hover{
+       /* background-color: #a5c8d9; */
+        border: 1px solid #c4ced3;  
         transition: 200ms;
-        text-align: left;
-        border-left: 3px solid #8296be; 
-        display: block;
     }
 
-    #cards,
-    #more1,
-    #more2,
-    #player,
-    #space,
-    #christmas{
-        height: 100%;
+
+
+
+
+    .small-project{
         background-color: #f9f9f9;
-        border-radius: 0px;
         display: grid;
-        grid-auto-rows: 70px;
-        grid-template-columns: 55% 45%;
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 50px 50px 50px;
         text-align: center;
         align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-    #cards{
-        grid-area:cards;
-    }
-
-    #cards .project-title,
-    #more1 .project-title,
-    #more2 .project-title,
-    #player .project-title,
-    #space .project-title,
-    #christmas .project-title{
-        z-index: 11;
-        grid-column: 1;
-        font-size: 1em;
-        margin: 0 10px 0 10px;
-        text-align: center;
-    }
-    #more1 .project-tags,
-    #more2 .project-tags,
-    #cards .project-tags,
-    #player .project-tags,
-    #space .project-tags,
-    #christmas .project-tags{
-        z-index: 11;
-        grid-column: 1;
-        text-align: center;
-        margin: 0 10px 0 10px;
-    }
-    #more1 .project-descr,
-    #cards .project-descr,
-    #player .project-descr,
-    #space .project-descr,
-    #christmas .project-descr{
-        grid-column: 1/3;
-        border: 0;
-        width: auto;
-        height: 100%;
-        margin: 0 0 0 55%;
-        padding: 0;
-        display: block;
-        opacity: 1;
-    }
-
-
-    #more1 .status,
-    #more2 .status,
-    #cards .status,
-    #christmas .status{
-        grid-column: 1/3;
-        grid-row: 1/3;
-        opacity: 0;
-        font-size: 1em;
-        text-decoration: none;
-        color:white;
-        background:rgba(63, 70, 101, 0.9);
-        text-transform: none;
-        padding: 30px;
-        z-index: 1000;
-    }    
-    #player .status,
-    #space .status{
-        grid-column: 1/3;
-        grid-row: 1/3;
-        opacity: 0;
-        font-size: 1em;
-        text-decoration: none;
-        color:white;
-        background:rgba(63, 70, 101, 0.9);
-        text-transform: none;
-        padding: 30px;
-        z-index: 1000;
-    }
-    #behance-project{
-        background-color: #8296be;
-    }
-
-    #more1:hover .project-descr,
-    #cards:hover .project-descr,
-    #player:hover .project-descr,
-    #space:hover .project-descr,
-    #christmas:hover .project-descr{
-        opacity: 1;
-        transition: 200ms;
         margin: 0;
-        width: 100%;
-        height: auto;
-    }    
-    #more1:hover .project-tags,    #more1:hover .project-title,
-    #cards:hover .project-tags,    #cards:hover .project-title,
-    #player:hover .project-tags,    #player:hover .project-title,
-    #space:hover .project-tags,    #space:hover .project-title,
-    #christmas:hover .project-tags,    #christmas:hover .project-title{
+    }
+
+
+    .small-project .project-icon{
+        grid-column: 1;
+        grid-row: 1/4;
+        width: 300px;
+        height: 150px;
+        padding: 0;
+        margin: 0;
+    }
+    .small-project .project-icon .project-icon-img img{
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        height: 150px;
         opacity: 0;
+
     }
-    #more1:hover .status,
-    #cards:hover .status,
-    #player:hover .status,
-    #space:hover .status,
-    #christmas:hover .status{
+
+
+    .small-project .project-icon  .project-icon-img-svg img{
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        height: 150px;
+        opacity: 0.2;
+
+    }
+
+    .small-project:hover .project-icon .project-icon-img img{
         opacity: 1;
-        transition: 200ms;
-        z-index: 10;
-        align-items: center;
-    }
-    #more1 .status::after,
-    #cards .status::after,
-    #player .status::after,
-    #space .status::after,
-    #christmas .status::after{
-        content: "";
-        background-image: url("assets/external-link.png") ;
-        background-size: 100% auto;
-        display: inline-block;
-        width: 0.8em; 
-        height: 0.8em;
-        margin: 0 0 0 5px;
-        padding: 0 0 0 0;
-    }
-     #more1 .status:active,
-    #cards .status:active,
-    #player .status:active,
-    #space .status:active,
-    #christmas .status:active{
-        margin-top: 5px;
-        opacity: 0.5;
-    }
-    
-    #more1 .project-tags,
-    #more2 .project-tags{
-        /*grid-column: 1/5;*/
-    }
-    
-    #more1 .project-title,
-    #more2 .project-title{
-        /*ggrid-column: 1/5;*/
+        transition: 300ms;
     }
 
-    #player{
-        grid-area:player;
-    }
-    #space{
-        grid-area:space;
-    }
-    #christmas{
-        grid-area:christmas;
 
-    }
-    #more1{
-        grid-area: more1;
-    }
-    #more2{
-        grid-area: more2;
-    }
-
-    .project:hover{
-        cursor: pointer;
-        transition: 200ms;
-    }
-    .project:hover .status{
+    .small-project:hover .project-icon .project-icon-img-svg img{
         opacity: 0;
-        transition: 200ms;
-    }
-    .project:hover .project-descr{
-        opacity: 1;
-        transition: 200ms;
-        margin-left: 0;
+        transition: 300ms;
     }
 
-    
-    
+    .small-project .project-title{
+        grid-column: 2;
+        grid-row:1;
+        text-align: left;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        font-weight: bolder;
+        padding: 0;
+        margin: 20px 0 0 10px;
+    }
+
+    .small-project .project-tags{
+        grid-column: 2;
+        grid-row:2;
+        text-align: left;
+        font-size: 0.8em;
+        padding: 0;
+        margin: 0 0 10px 10px;
+    }
+    .small-project .project-link{
+        grid-column: 2/3;
+        grid-row:3;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1em;
+        text-decoration: none;
+        color:#3e6f7f;
+        /*background-color: #e0eef5;*/
+        padding: 15px 0 15px 0;
+        margin: 5px 10px 25px 10px;
+  
+        border: 1px solid #e0eef5;
+
+    }
+    .small-project .project-link:hover{
+       /* background-color: #a5c8d9; */
+        border: 1px solid #c4ced3;        
+   
+    }
     
     
     
@@ -692,30 +860,35 @@ html {
     
     #about{
         display:grid;
-        grid-template-columns: 900px;
+        grid-template-columns: 800px;
         grid-template-rows: auto;
-        margin: 0 0 100px;
-        grid-gap:20px;
+        margin: 0 0 100px 0;
+        padding: 0;
         grid-template-areas: 
             "block-title block-title"
             "about-content about-content";
-    }
-    
-    .about-subtitle{
-        font-size: 1.3em;
-    }   
+    }  
     
     
     .about-content{
         margin:0;
-        padding: 0 -10px 0 10px;
-        
+        padding: 0 0 0 10px;
     }    
     .about-general{
         margin:0;
         padding: 0;
         line-height: 1.7;
         text-align: justify;
+        margin:0;
+
+    }
+    .recommendation{
+        background-color: #f9f9f9;
+        margin: 0px;
+    }
+    
+    .recommendation-referal{
+
     }
     .about-skill{
         padding-left: 20px;
@@ -731,12 +904,12 @@ html {
         grid-column-gap: 15px; 
         grid-row-gap: 15px;
         text-align: center;
-        margin: 50px 0 50px 0;
+        margin: 30px 0 50px 0;
     }
     .about-contacts a{
         text-decoration: none;
         font-size: 1.1em;
-        transition: 200ms;
+
         padding: 10px 0 10px 0;
         margin: 0;
         color: black;
@@ -764,36 +937,6 @@ html {
         color:#1a408b;
         font-weight: 300;
     }
-    #linkedin{
-
-        
-    }
-    #artstation{
-
-    }
-    
-#secretgame .status-dev{
-    background-color: #8296be;
-}
-#secretgame:hover .status-dev{
-    opacity:1;
-    background-color: #65779d;
-}
-    
-#secretgame .status-dev:after{
-    content: "";
-    background-image: url("assets/external-link.png");
-            background-size: 100% auto;
-        display: inline-block;
-        width: 0.8em; 
-        height: 0.8em;
-        margin: 0 0 0 5px;
-        padding: 0 0 0 0;
-}
-    
-#secretgame:hover .project-descr{
-    opacity:0;
-}
 
     
 }
@@ -802,6 +945,11 @@ html {
 
 
 
+/*---------------------------------*/
+/*---------------------------------*/
+/*---------------------------------*/
+/*---------------------------------*/
+/*---------------------------------*/
 
 
 

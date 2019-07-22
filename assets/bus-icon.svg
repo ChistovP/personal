@@ -1,0 +1,21 @@
+<svg width="718" height="718" viewBox="0 0 718 718" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="718" height="718" fill="#F9F9F9"/>
+<path d="M196 289C378.438 289 481.349 379 510 424" stroke="black" stroke-width="10"/>
+<line x1="586.175" y1="124.464" x2="714.175" y2="-3.53553" stroke="black" stroke-width="10"/>
+<line x1="-3.53553" y1="713.175" x2="132.464" y2="577.175" stroke="black" stroke-width="10"/>
+<path d="M200 244H441C482.974 244 517 278.026 517 320V388C517 429.421 483.421 463 442 463H200V287.5V244Z" stroke="black" stroke-width="10"/>
+<rect x="164" y="159" width="392.985" height="390" stroke="black" stroke-width="10"/>
+<line x1="232" y1="453" x2="346" y2="453" stroke="#F9F9F9" stroke-width="30"/>
+<circle cx="289" cy="465" r="61" stroke="black" stroke-width="10"/>
+<rect x="186" y="468" width="173" height="68" fill="#F9F9F9"/>
+<circle cx="289" cy="465" r="34" stroke="black" stroke-width="10"/>
+<rect x="469" y="444.284" width="40" height="30" transform="rotate(-45 469 444.284)" fill="#F9F9F9"/>
+<rect x="178" y="334" width="40" height="30" transform="rotate(-90 178 334)" fill="#F9F9F9"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="718" height="718" fill="white"/>
+</clipPath>
+</defs>
+</svg>
