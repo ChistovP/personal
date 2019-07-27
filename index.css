@@ -98,21 +98,38 @@ html {
 .composition{
     display: grid;
     grid-template-columns: auto;
-    grid-auto-rows: auto;
+    grid-template-rows: auto;
     padding: 3%;
     margin: 0 10% 0 10%;
-    background-color: #f9f9f9;
+    background-color: #007ec6;
 }
 .composition-title{
     font-size: 0.8em;
-    opacity: 0.7;
+    opacity: 1;
     font-weight: 700;
     padding: 5px 0 5px 0;
-    color: #2f4672;
+    color: white;
+    
 }
 .composition-text{
     font-size: 0.7em;
     margin: 0 0 10px 0px;
+    color:#e4edff;
+}
+.composition-block{
+    grid-row:1;
+    grid-column: 1;
+    z-index: 90;
+    text-align: left;
+    padding: 10px;
+}
+.composition img{
+    width: auto;
+    height: 100%;
+    grid-row:1;
+    grid-column: 1;
+    display: none;
+    
 }
 /*----------------------*/
 
@@ -120,7 +137,6 @@ html {
 
 /*----------------------*/
 .recommendation{
-    background-color: #f9f9f9;
     margin: 0 20px 20px 20px;
 }
 .recommendation-text{
@@ -128,6 +144,7 @@ html {
     margin: 0;
     font-size: 0.8em;
     text-align: justify;
+            background-color: #f9f9f9;
 }
 .recommendation-referal{
     padding: 10px 10px 0px 10px;
@@ -187,7 +204,7 @@ html {
     font-weight: 300;
     opacity: 0.6;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0;
     color: #1a408b;
 }
 
@@ -452,7 +469,8 @@ html {
     display:grid;
     grid-template-areas: 
         "block-title";
-
+    padding: 0 10% 0 10%;
+    margin: 0;
 }
 
 #contact{
@@ -466,9 +484,7 @@ html {
 
 
 .about-general{
-    margin: 0 20px 0 20px;
     text-align: justify;
-    justify-content: center;
 }    
 
 .about-contacts{
@@ -522,6 +538,7 @@ html {
     grid-auto-rows: auto;
     padding: 0 10% 0 10%;
     margin: 0;
+    opacity: 0.1;
 }
 .read-block{
     display: grid;
@@ -534,7 +551,7 @@ html {
     font-size: 2em;
     text-align: center;
     font-weight: 700;
-    padding: 20px;
+    padding: 50px;
     margin: 0;
 }
 .read-text{
@@ -560,7 +577,9 @@ html {
 
 #objective .read-text{
     padding: 5%;
-    border: 1px dashed grey;
+            border-top: 5px solid grey;
+        border-bottom: 5px solid grey;
+    background-color: #f9f9f9;
 }
 
 /*---------------------------------------------------------*/
@@ -737,7 +756,7 @@ html {
         justify-content: center;
         margin: 0;
             animation-name: init-work;
-    animation-duration: 0.5s;   
+    animation-duration: 0.7s;   
     }
 
     
@@ -756,8 +775,8 @@ html {
     .project-icon{
         grid-column: 1;
         grid-row: 1/3;
-        height: 90px;
-        width: 90px;
+        height: auto;
+        width: 100%;
         padding: 0;
         margin: 0;
     }
@@ -959,11 +978,9 @@ html {
     
     
     
-    
-    
     #about{
         display:grid;
-        grid-template-columns: 1030px;
+        grid-template-columns: 700px;
         grid-template-rows: auto;
         margin: 0 0 0px 0;
         padding: 0;
@@ -972,13 +989,13 @@ html {
             "block-title block-title"
             "about-content about-content";
         animation-name: init;
-        animation-duration: 0.5s;
+        animation-duration: 0.7s;
     }  
     
     
     .about-content{
         margin:0;
-        padding: 0 0 0 10px;
+        padding: 0 0 0 0;
     }    
     .about-general{
         margin:0;
@@ -989,14 +1006,10 @@ html {
 
     }
     .recommendation{
-        background-color: #f9f9f9;
+
         margin: 0px;
                 animation-name: init-work;
-        animation-duration: 0.5s;
-
-    }
-    
-    .recommendation-referal{
+        animation-duration: 0.7s;
 
     }
     .about-skill{
@@ -1048,7 +1061,11 @@ html {
     /*---------------------------------------------------------*/
     .read{
         padding: 0;
-        margin: 0 20% 0 20%;
+        margin: 0;
+        grid-template-columns: 700px;
+        justify-content: center;
+        animation-name: init-work;
+        animation-duration: 0.7s;
     }
     .read-block{
         display: grid;
@@ -1074,7 +1091,35 @@ html {
     /*---------------------------------------------------------*/
     /*----------------------*/
     .composition{
-        margin: 0 20% 0 20%;
+        font-family: 'Barlow';
+        margin: 0;
+        text-align: left;
+        grid-template-columns: 350px 350px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        font-size: 1.2em;        
+       /* border-top: 5px solid grey;
+        border-bottom: 5px solid grey;*/
+        padding: 2%;
+        animation-name: init;
+        animation-duration: 0.7s;
+        background-repeat: no-repeat;
+        background-position: center;
+    }       
+    .composition img{
+        display: block;
+        grid-row: 1;
+        grid-column: 1;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        filter:blur(0);
+    }
+    .composition-block{
+        grid-row: 1;
+        grid-column: 2;
+
     }
     /*----------------------*/
     
