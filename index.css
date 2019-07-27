@@ -2,7 +2,31 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+
 }
+
+@keyframes init {
+  0% {
+      opacity:0;
+    }
+    100%{
+      opacity:1; 
+    }
+}
+
+@keyframes init-work {
+  0% {
+      opacity:0;
+    }
+    50%{
+      opacity:0;
+    }
+    100%{
+      opacity:1; 
+    }
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -70,7 +94,32 @@ html {
     margin: 10px 0 0 0;
 }
 
+/*----------------------*/
+.composition{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto; 
+    margin: 0 100px 0 100px;
+    justify-content: flex-start;
+}
+.composition-block{
+    padding: 0 0 10px 0;
+}
+.composition-title{
+    font-size: 0.7em;
+    opacity: 0.7;
+    font-weight: 700;
+    padding: 5px 5px 5px 0;
+}
+.composition-text{
+    font-size: 0.7em;
+    margin: 0 0 0 10px;
+}
+/*----------------------*/
 
+
+
+/*----------------------*/
 .recommendation{
     background-color: #f9f9f9;
     margin: 0 20px 20px 20px;
@@ -180,6 +229,7 @@ html {
    /* justify-content: center;*/
     margin: 0 20px 0 20px;
     grid-column-gap: 0;
+
 }
 
 .project{
@@ -401,10 +451,9 @@ html {
 
 #about{
     display:grid;
-
-    justify-content: center;
     grid-template-areas: 
         "block-title";
+
 }
 
 #contact{
@@ -441,7 +490,7 @@ html {
     color: black;
     margin: 0 0 50px 0;
     grid-column-gap: 0;
-    border:1px solid lightgrey;
+    border: 1px solid #e0eef5;
 
 }    
 .about-contacts a:hover{
@@ -465,16 +514,65 @@ html {
 }
 
 
-/*-----------------------------------ABOUT-----------------------------------*/
 
-/*-----------------------------------CONTACT-----------------------------------*/
 
+/*---------------------------------------------------------*/
+.read{
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.read-block{
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+}
+.read-head{
+    grid-row:1;
+    grid-column: 1;
+    font-family: 'Barlow';
+    font-size: 2em;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px;
+    margin: 0;
+}
+.read-text{
+    grid-row: 2;
+    font-size: 1em;
+    padding: 0;
+    margin: 0 100px 0 100px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.read-text ul{
+    margin: 0 50px 0 50px;
+    padding: 10px;
+    list-style:url(assets/list-icon.svg);
+}
+.read-text img{
+    width: 100%;
+    height: auto;
+}
+
+#objective .read-text{
+    border: 1px dashed grey;
+}
+
+/*---------------------------------------------------------*/
 
 @media only screen and (min-width: 990px){
     body{
         padding: 0;
         margin: 0;
         font-family: 'Open Sans', sans-serif;
+
     }
 
     .grid-container{
@@ -507,6 +605,8 @@ html {
         justify-content: center;
         align-items:center;
         margin: 0;
+        animation-name: init;
+        animation-duration: 0.7s;
     }
     .hero .hero-text{
         grid-row:1;
@@ -604,7 +704,10 @@ html {
     
     
     
-
+    .content{
+        animation-name: init;
+        animation-duration: 0.7s;
+    }
     
     .block-title{
         grid-area: block-title;
@@ -635,6 +738,8 @@ html {
             "cards cards";
         justify-content: center;
         margin: 0;
+            animation-name: init-work;
+    animation-duration: 0.5s;   
     }
 
     
@@ -860,13 +965,16 @@ html {
     
     #about{
         display:grid;
-        grid-template-columns: 800px;
+        grid-template-columns: 1030px;
         grid-template-rows: auto;
-        margin: 0 0 100px 0;
+        margin: 0 0 0px 0;
         padding: 0;
+        justify-content: center;
         grid-template-areas: 
             "block-title block-title"
             "about-content about-content";
+        animation-name: init;
+        animation-duration: 0.5s;
     }  
     
     
@@ -885,6 +993,9 @@ html {
     .recommendation{
         background-color: #f9f9f9;
         margin: 0px;
+                animation-name: init-work;
+        animation-duration: 0.5s;
+
     }
     
     .recommendation-referal{
@@ -895,8 +1006,6 @@ html {
         line-height: 1.7;
     }
     
-    
-    
     .about-contacts{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -904,18 +1013,17 @@ html {
         grid-column-gap: 15px; 
         grid-row-gap: 15px;
         text-align: center;
-        margin: 30px 0 50px 0;
+        margin: 30px 0 0 0;
     }
     .about-contacts a{
         text-decoration: none;
         font-size: 1.1em;
-
         padding: 10px 0 10px 0;
         margin: 0;
         color: black;
         margin: 0 0 50px 0;
         grid-column-gap: 0;
-        border:1px solid lightgrey;
+        border: 1px solid #e0eef5
 
     }    
     .about-contacts a:hover{
@@ -950,6 +1058,8 @@ html {
 /*---------------------------------*/
 /*---------------------------------*/
 /*---------------------------------*/
+
+
 
 
 
