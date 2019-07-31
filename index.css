@@ -136,11 +136,12 @@ html {
     
 }
 .composition a{
-    color:#a1c0ea;
+    opacity: 0.8;
+    color:white;
     text-decoration:none;
 }
 .composition a:hover{
-    color:white;
+    opacity: 1;
     text-decoration:underline;
     transition: 200ms;
 }
