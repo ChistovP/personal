@@ -21,9 +21,7 @@
                 <a href="assets/cv_pavelchistov.pdf"  id="download-cv"  target="_blank">Download CV (.pdf)</a>
             </div>
             <div class="content">
-                <div class="block-title"><a name="mywork">&nbsp;</a><p>- Page is under construction -</p></div>
-
-               <!-- <div class="block-title"><a name="mywork">&nbsp;</a><p>Bus Travel Experience Toolkit Portal</p></div>
+                <div class="block-title"><a name="mywork">&nbsp;</a><p>Bus Travel Experience Toolkit Portal</p></div>
                 <div class="composition">
                     <img src="assets/bus/bus_icon2.svg" />
                     <div class="composition-block">
@@ -32,7 +30,7 @@
                         </div>
                        
                         <div class="composition-text">
-                            Solo (Designer, Researcher, Developer)
+                            Solo - research, design, development
                         </div>
                         <div class="composition-title">
                             TOOLS
@@ -46,33 +44,64 @@
                         <div class="composition-text">
                             9 months
                         </div>
+                        <div class="composition-title">
+                            PROJECT LINK
+                        </div>
+                        <div class="composition-text">
+                            <a href="https://chistovp.github.io/llb-trex/#/home" target="_blank">https://chistovp.github.io/llb-trex/#/home</a>
+                        </div>
                     </div>
                 </div>
                 <div class="read">
                     <div class="read-block">
                         <p class="read-head">
+                            Problem
+                        </p>
+                        <div class="read-text" id="problem">
+                            There is a certain lack of a proper publicly available tool for digital bus transportation solutions. Most of these solutions are provided by local transportation companies. In addition, there is also a lack of framework that software developers could use to understand some specifics and aspects of the bus travel experience and its technical environment.
+                        </div>
+                    </div>  
+                    <div class="read-block">
+                        <p class="read-head">
                             Background
                         </p>
                         <div class="read-text">
-                            This project was a part of the Living Lab Bus, an open development platform for public bus transportation solutions that offers:
+                            This project was a part of the <a href="http://livinglabbus.fi">Living Lab Bus</a> (LLB) that was focused on open data and public development tools in the context of public bus transportation. LLB is an open development platform that offers:
                             <ul>
-                                <li>Fleet of 3 electric buses (heavily supplemented with sensors) operating in Helsinki on lines 23 and 55</li>
-                                <li>APIs that allow to fetch sensor data from buses </li>
-                                <li>Developer Portal and “Oma kokoelma” (“Own Collection”) for apps and API access</li>
-                                <li>Design tools (Bus Travel Experience Toolkit) based on passenger research by LLB staff</li>
+                                <li>Fleet of 3 electric buses (heavily supplemented with sensors) operating in Helsinki, Finland on lines 23 and 55</li>
+                                <li>Set of APIs that allow to fetch sensor data from buses. Blob data API is used for historical data, while RESTful  API and MQTT - for real-time data. </li>
+                                <li><a href="https://llb.sis.uta.fi/portal" target="_blank">Developer Portal</a> and <a href="https://llb.sis.uta.fi/#/home" target="_blank">“Oma kokoelma”</a> (“Own Collection”) that serves as applications hub and API access point</li>
+                                <li>Bus Travel Experience Toolkit</li>
                             </ul>                        
+                        </div>
+                    </div>                    
+                    <div class="read-block" >
+                        <p class="read-head">
+                            Bus Travel Experience Toolkit
+                        </p>
+                        <div class="read-text">
+                            <img src="assets/bus/toolkit.svg" id="toolkit" /><br>
+                            Designed by LLB staff, <a href="https://llb.sis.uta.fi/portal/INSPIRATION%20TOOLKIT.pdf" target="_blank">the Toolkit</a> is a set of bus-themed inspiration and design tools. Its purpose is to inspire and inform developers about bus context and its aspects in order to motivate them to start ideation and developing bus-related applications.<br><br>
+                            <b>PASSENGER PERSONAS</b><br>
+                            These personas represent 5 different passenger archetypes with each of their own travel habits, preferences and conduct during the travel.<br><br>
+                            <b>TRAVEL EXPERIENCE MODEL</b><br>
+                            This model visualizes general knowdledge of factors that influence travel experience, e.g. importance of the air quality for passengers or social aspects of the standart bus trip.<br><br>
+                            <b>CONTEXT CARDS</b><br>
+                            Set of 10 bus related thematic cards for brainstorm sessions. These can be used as topic sources or communication tools similarly to PLEX cards.<br><br>
+                            <b>PASSENGER JOURNEY MAP</b><br>
+                            This map breaks down typical bus travel situation into a sequence of actions that passenger usually takes.<br><br>
                         </div>
                     </div>
                     <div class="read-block" id="objective">
                         <p class="read-head">
-                            Objective
+                            Objectives
                         </p>
                         <div class="read-text">
                             <ul>
                                 <li>Find out what kind of design materials can be considered useful for developers’ ideation
-                            process</li>
+                            process in the context of bus transportation</li>
                                 <li>Find a suitable format of bus sensor data visualizations that can support and motivate developers to ideate</li>
-                                <li>Figure out how to combine Toolkit and visualizations and integrate them into Living Lab Bus platform</li>
+                                <li>Figure out how to combine Toolkit and visualizations and integrate them into Living Lab Bus platform in a format of a web portal</li>
                             </ul>
                         </div>
                     </div>
@@ -81,8 +110,7 @@
                             Research methodology
                         </p>
                         <div class="read-text">
-                            <img src="assets/bus/shcedule6.png" />
-                            <img src="assets/bus/methods%203.png" />
+                            <img src="assets/bus/schedule.svg" />
                         </div>
                     </div>
                     <div class="read-block">
@@ -90,16 +118,32 @@
                             Phase 1 - Scenario evaluation
                         </p>
                         <div class="read-text"> 
-                            GOAL<br>
-                            Exploration of Toolkit's attribute space. Discovery of the artefacts related to format and usage of the Toolkit by developers. Sensor data visualization format exploration.<br><br>
-                            PROCEDURE<br>
-                            Two different scenarios of Toolkit usage. Both scenarios were introduced to 10 software developers. Wireframe were created for each of the scenario to support the stories visually.<br><br>
-                            RESULTS
+                            <b>GOAL</b><br>
+                            Exploration of Toolkit's attribute space. Discovery of the artifacts related to format and usage of the Toolkit by developers. Sensor data visualization format exploration.<br><br>
+                            <b>DESCRIPTION</b><br>
+                            Two different scenarios of Toolkit usage and wireframes for each story. Both scenarios were introduced to 10 software developers. Idea behind scenarios was to check the assumptions in 2 cases:  developer that has some vague idea about his future project and developer that has no context for his future work.<br><br>
+                            Developers also got a chance to take a look at the current Toolkit materials in physical format to get their opinion on it. After that, they were interview in regard of the stories and Toolkit's properties.
+                            
+                            <br><br>
+                            <b>WIREFRAMES</b><br>
+                            Wireframes were supplemental to scenarios and showed the UI of the future Toolkit portal within the structure of the  Developer portal that also has access to  APIs. These wireframes were also used as a visual basis, so developers could express their expectation in contrast to presented images.
+                            
+                            Sensor data visualizations were presented in a form of suggestive flavour text, generated based on accumulated sensor data.<br>
+                            <div class="image-preview">
+                                <p>VIEW WIREFRAMES</p>
+                                <a href="assets/bus/wf1.png" target="_blank"><img src="assets/bus/wf1.png" id="wf"/></a>
+                            </div>
+                            <div class="image-preview">  
+                                <p>VIEW WIREFRAMES</p>
+                                <a href="assets/bus/wf2.png" target="_blank"><img src="assets/bus/wf2.png" id="wf"/></a>
+                            </div>
+                            <b>RESULTS</b><br>
+                            Developers were fairly comfortable and satisfied with the Toolkit and presented structure, but they also have raised several points:
                             <ul>
-                                <li>Presence of the  LLB API within proposed wireframes set unnecesary expectations from the Toolkit. When introduced to an API or technology, developers  most likely shift their focus towards them instead of the Toolkit.</li>
-                                <li>Lack of easily available research data resulted in developers simply underestimating value and contents of the Toolkit.</li>
-                                <li>Terminology and format of the Toolkit was confusing for the developers.</li>
-                                <li>Developers expected more traditional data visualizations such as maps, parameter values, charts and so on.</li>
+                                <li>Presence of the LLB API within proposed wireframes set unnecesary expectations from the Toolkit. E.g. developers thought that Toolkit would supplement or advertise the API instead of presenting a value on its own. </li>
+                                <li>Lack of easily available research data to back the Toolkit also resulted in developers simply underestimating the value of it.</li>
+                                <li>Terminology, tools titles and format of the Toolkit was confusing for the developers as most of them had no prior experience with them or their types. Personas caused most of the perception issues, while Context Cards and Passenger Journey Map were the most usable for developers.</li>
+                                <li>Developers expected traditional data visualizations such as maps, parameter values and charts instead of generated text.</li>
                             </ul>
                             
                         </div>
@@ -109,20 +153,81 @@
                             Phase 2 - First version of the prototype
                         </p>
                         <div class="read-text">
-                            DESIGN PHILOSOPHY<br>
-                            - 
+                            <b>DESIGN GOALS</b><br>
+                            <ul>
+                                <li>Reachability. Toolkit portal needs to be an entity of its own and be separated from Developer Portal and LLB APIs. It is vital to make sure that developers do not deprioritize the content of the Toolkit in favor of technology.</li>
+                                <li>Interconnectivity. Toolkit's materials needs to be interconnected to ensure that developers are aware of the all Toolkit's offerings and to make the look of the Toolkit more consistent and holistic.</li>
+                                <li>Availability of research data. Portal should provide necessary papers and information to back Toolkit's content.</li>
+                                <li>Lower entry threshold. Format and terminology of the Toolkit need to be adjusted to match developers' expectations.</li>
+                            </ul>
+                            <br>
+                            <b>SENSOR DATA VISUALIZATIONS</b><br>
+                            Given the inspirational nature of this work, visualizations were never meant to be a research or a data analysis tool. Thus, datavis took form of a map with locational data of some of the LLB buses and sensor parameters values. Data visualizations also served as an example of what can be done with the LLB API.
                             <br><br>
-                            SENSOR DATA VISUALIZATIONS<br>
-                            -
+                            <b>ORIGINAL FLOWCHART</b><br>
+                            This flowchart demonstrates first attempt to look at overall integration of the future Toolkit Portal and its structure.
+                            <div class="image-preview"> 
+                                <a href="assets/bus/flow.png" target="_blank"><img src="assets/bus/flow.png" /></a>
+                                <p>VIEW FLOWCHART</p>
+                            </div>
+                            <b>FINAL FLOWCHART</b><br>
+                            This flowchart was used as a reference material for the implementation part of the phase and some changes were introduced during the development.
                             <br><br>
-                            ORIGINAL FLOW<br>
-                            -
+                            Major addition to the Toolkit was direct links that tie together Personas and relevant Travel Experience Model's contexts and factors for a better holistic view of the Toolkit. Furthermore, Personas and contexts were supplemented with links to relevant sensor data visualizations. This was introduced in order to attract developers to explore bus technical environment and also give additional perspective of some of the Model's contexts. E.g. what sensor parameters may or may not influence air quality or speed of the bus and thus - passenger experience.
                             <br><br>
-                            HIGH FIDELITY FLOW<br>
-                            -
+                            Additionally, Glossary with a list of relevant terms and definitions was added to support developer's understanding of Toolkit and to address terminology issues. This feature was inspired by JavaScript frameworks and libraries documentation websites, such as <a href="https://redux.js.org">Redux</a>.
                             <br><br>
-                            RESULT<br>
-                            -
+                            Resources page was added as a knowledge bank that contains links to scientific papers published by LLB and related to Toolkit creation.
+                            <div class="image-preview"> 
+                                <p>VIEW FLOWCHART</p>
+                                <a href="assets/bus/flow_ui.png" target="_blank"><img src="assets/bus/flow_ui.png" id="flow"/></a>
+                            </div>
+                            <b>RESULTS</b><br>
+                            Prototype was developed with React.js for portal's architecture and CSS Grid for its layout. Google GEO API was used for map and visual location tracking of the bus. Living Lab Bus RESTful API allowed to fetch real-time sensor data from the buses. 
+                            <div class="image-preview"> 
+                                <p>VIEW INTRODUCTION PAGE</p>
+                                <a href="assets/bus/proto/intro.png" target="_blank"><img src="assets/bus/proto/intro.png" id="flow"/></a>
+                            </div>
+                            <div class="image-preview"> 
+                                <p>VIEW TOOLKIT PAGE</p>
+                                <a href="assets/bus/proto/research.png" target="_blank"><img src="assets/bus/proto/research.png" id="flow"/></a>
+                            </div>
+                            <div class="image-preview"> 
+                                <p>VIEW LIST OF PERSONAS</p>
+                                <a href="assets/bus/proto/list.png" target="_blank"><img src="assets/bus/proto/list.png" id="flow"/></a>
+                            </div>
+                            <div class="image-preview"> 
+                                <p>VIEW PERSONA PAGE</p>
+                                <a href="assets/bus/proto/persona.png" target="_blank"><img src="assets/bus/proto/persona.png" id="flow"/></a>
+                            </div>
+                            <div class="image-preview"> 
+                                <p>VIEW TRAVEL EXPERIENCE MODEL PAGE</p>
+                                <a href="assets/bus/proto/model.png" target="_blank"><img src="assets/bus/proto/model.png" id="flow"/></a>
+                            </div>
+                            <div class="image-preview"> 
+                                <p>VIEW CONTEXT PAGE</p>
+                                <a href="assets/bus/proto/context.png" target="_blank"><img src="assets/bus/proto/context.png" id="flow"/></a>
+                            </div>
+                            <div class="image-preview"> 
+                                <p>VIEW PASSENGER JOURNEY MAP PAGE</p>
+                                <a href="assets/bus/proto/map.png" target="_blank"><img src="assets/bus/proto/map.png" id="flow"/></a>
+                            </div>
+                            <div class="image-preview"> 
+                                <p>VIEW CONTEXT CARDS PAGE</p>
+                                <a href="assets/bus/proto/cards.png" target="_blank"><img src="assets/bus/proto/cards.png" id="flow"/></a>
+                            </div>
+                            <div class="image-preview"> 
+                                <p>VIEW SENSOR DATA VISUALIZATIONS PAGE</p>
+                                <a href="assets/bus/proto/sensor.png" target="_blank"><img src="assets/bus/proto/sensor.png" id="flow"/></a>
+                            </div>
+                            <div class="image-preview"> 
+                                <p>VIEW RESOURCES PAGE</p>
+                                <a href="assets/bus/proto/resources.png" target="_blank"><img src="assets/bus/proto/resources.png" id="flow"/></a>
+                            </div>
+                            <div class="image-preview"> 
+                                <p>VIEW GLOSSARY PAGE</p>
+                                <a href="assets/bus/proto/glossary.png" target="_blank"><img src="assets/bus/proto/glossary.png" id="flow"/></a>
+                            </div>
                             <br><br>
                         </div>
                     </div>
@@ -131,15 +236,18 @@
                             Phase 3 - Prototypes tests
                         </p>
                         <div class="read-text">
-                            GOAL<br>
-                            - 
+                            <b>DESCRIPTION</b><br>
+                            The prototype was given to 8 software developers, 4 of which were a part of the previous study. Developers had several tasks that were focused on exploration of the portal and its content.
                             <br><br>
-                            PROCEDURE<br>
-                            - 
-                            <br><br>
-                            RESULTS<br>
-                            - 
-                            <br><br>
+                            <b>RESULTS</b><br>
+                            <ul>
+                                <li>General layout of the prototype received mostly positive response, but some developers would like to see more complex graphics.</li>
+                                <li>Layout of the Travel Experience Model page was the most confusing part of the Toolkit and had very few affordances for developers to operate with.</li>
+                                <li>Personas were the easiest tool to use and understand, opposite to the previous study. Put personas list page didn't have enough signifiers that listed Personas are interactive.</li>
+                                <li>Sensor data visualizations could use some filters to avoid cognitive load.</li>
+                                <li>Terminology was much better, but still there were some slightly rough edges, mostly with the page titles.</li>
+                                <li>Developer didnät want to have a single page that contained all research materials exclusively and thus, resources should be available on relevant pages</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="read-block">
@@ -147,22 +255,32 @@
                             Phase 4 - Final version of the prototype
                         </p>
                         <div class="read-text">
-                            MAJOR CHANGES<br>
-                            - 
-                            <br><br>
-                            RESULTS<br>
-                            - 
+                            <b>MAJOR CHANGES</b><br>
+                            While general structure was considered feasable and usable, there were some changes introduced to the prototype before sending it to production:
+                            <ul>
+                                <li>Prototype got a major visual overhaul, Travel Experience Model received most drastic change as it is no longer replicates paper original.</li>
+                                <li>Each tool page received its own introduction page and download link that leads to the PDF version of the Toolkit.</li>
+                                <li>Most of the extra information (connections between tools, related contexts, sensors, ...) were grouped into special highlight box that also contains tooltips explaining those connections. Each Persona also received a broader range or related contexts and sensors and has a direct link to published paper related to its creation.</li>
+                                <li>Sensor data visualizations page was supplemented with collapsables to reduce visual clutter.</li>
+                                <li>Introduction page was also changed and now introduces the portal in a more engaging way that just plain text.</li>
+                            </ul><br>
+                            <b>RESULT</b><br>
+                            <a href="https://chistovp.github.io/llb-trex/#/home" target="_blank" id="result-link">AVAILABLE ONLINE</a>
                             <br><br>
                         </div>
                     </div>
 
-                </div>-->
+                </div>
                 <div id="about">
+                    <div class="about-content" id="project-about">
+                        <p class="block-title" id="contacts-title">Feel free to contact  me!</p>
                         <div class="about-contacts">
-                                    <a href="index.html" id="email">Go back to main page</a> 
+                            <a href="mailto:pavelchistovux@gmail.com" id="email">pavelchistovux@gmail.com</a> 
+                            <a href="https://www.linkedin.com/in/pavel-chistov/" id="linkedin" target="_blank">LinkedIn</a> 
+                            <a href="https://www.artstation.com/pateytos" id="artstation" target="_blank">ArtStation</a> 
+                            <a href="https://www.behance.net/pavelchistov" id="behance" target="_blank">Behance</a> 
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
