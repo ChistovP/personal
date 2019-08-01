@@ -146,12 +146,33 @@ html {
     transition: 200ms;
 }
 /*----------------------*/
+#comp-gover{
+    background-color: #f9f9f9;
+}
+#comp-gover #objective{
+    background-color: #f9f9f9;
+}
 
+#comp-gover .composition-title{
+    color: black;
+}
+#comp-gover .composition-text{
+    color: #454545;
+}
 
-
+#comp-gover a{
+    opacity: 0.8;
+    color:black;
+    text-decoration:none;
+}
+#comp-gover a:hover{
+    opacity: 1;
+    text-decoration:underline;
+    transition: 200ms;
+}
 /*----------------------*/
 .recommendation{
-    margin: 0 20px 20px 20px;
+    margin: 100px 20px 50px 20px;
 }
 .recommendation-text{
     padding: 20px;
@@ -647,7 +668,20 @@ html {
 .image-preview p{
     display: none;
 }
-
+/*----------------------*/
+#read-gover #problem{
+    background-color: #f9f9f9;
+    color:black;
+}
+#read-gover #objective{
+    border-top: 5px solid grey;
+    border-bottom: 5px solid grey;
+    padding:5%;
+}
+/*----------------------*/
+#project-link-soon{
+    opacity: 0.5;
+}
 /*---------------------------------------------------------*/
 
 @media only screen and (min-width: 990px){
@@ -1074,8 +1108,8 @@ html {
     }
     .recommendation{
 
-        margin: 0px;
-                animation-name: init-work;
+        
+        animation-name: init-work;
         animation-duration: 0.7s;
 
     }

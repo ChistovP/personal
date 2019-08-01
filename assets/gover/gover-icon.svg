@@ -1,0 +1,27 @@
+<svg width="284" height="284" viewBox="0 0 284 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5" clip-path="url(#clip0)">
+<rect x="5.6123" y="5" width="273.005" height="273.005" stroke="black" stroke-width="10"/>
+<rect x="277" y="254" width="20" height="7" transform="rotate(-90 277 254)" fill="#F9F9F9"/>
+<rect width="264" height="310" transform="matrix(1.82131e-08 1 1 -1.04907e-07 -15 10)" fill="#F9F9F9"/>
+<rect width="27" height="6" transform="matrix(1.82131e-08 1 1 -1.04907e-07 0 85)" fill="#F9F9F9"/>
+<rect width="27" height="6" transform="matrix(1.82131e-08 1 1 -1.04907e-07 0 129)" fill="#F9F9F9"/>
+<rect x="52" y="102" width="178" height="105" rx="22" stroke="black" stroke-width="10"/>
+<path d="M30 85H254V196H30V85Z" fill="#F9F9F9"/>
+<rect x="68" y="77" width="146" height="105" rx="22" stroke="black" stroke-width="10"/>
+<path d="M140.5 97.1787L167 104.327V135.5C167 150.136 155.136 162 140.5 162C125.864 162 114 150.136 114 135.5V104.327L140.5 97.1787Z" stroke="black" stroke-width="10"/>
+<path d="M141 115.172L154 118.609V134C154 141.18 148.18 147 141 147C133.82 147 128 141.18 128 134V118.609L141 115.172Z" stroke="black" stroke-width="10"/>
+<line x1="143" y1="184" x2="143" y2="208" stroke="black" stroke-width="10"/>
+<rect x="140" y="110" width="20" height="28" fill="#F9F9F9"/>
+<rect x="140" y="110" width="18" height="34" fill="#F9F9F9"/>
+<rect x="142" y="109" width="18" height="34" fill="#F9F9F9"/>
+<rect x="140" y="140" width="7" height="13" fill="#F9F9F9"/>
+<rect x="144" y="138" width="7" height="13" fill="#F9F9F9"/>
+<rect x="144" y="137" width="12" height="13" fill="#F9F9F9"/>
+<rect x="126" y="187" width="33" height="15" fill="#F9F9F9"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="284" height="284" fill="white"/>
+</clipPath>
+</defs>
+</svg>
