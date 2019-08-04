@@ -99,19 +99,19 @@
                         </p>
                         <div class="read-text">
                             <b>PLANNING</b><br>
-                            Project consists of 5 sprints that varied from 2 to 3 weeks. Weekly face-to-face meetings / co-design sessions and WhatsApp conversations.<br><br>
+                            Project lasted for 5 sprints (originally 7) that varied from 2 to 3 weeks due to occured complications. Team also conducted weekly face-to-face meetings and co-design sessions.<br><br>
                             <b>UNIVERSAL METADATA MODEL</b><br>
-                             Model should contain metadata of datastores and work accross several datastore types - relational and non-relational (PostgreSQL and MongoDB). Model also needs to work with structured and unstructured files.<br><br> 
+                            Model should contain metadata of datastores and work accross several datastore types - relational and non-relational (PostgreSQL and MongoDB). Model also needs to work with structured and unstructured files.<br><br> 
                             <b>OPEN SOURCE</b><br>
                             Project should be developed under MIT license.<br><br>    
                             <b>GDPR ANNOTATIONS</b><br>
-                            System needs to support annotations that can be assigned to any possible entity. Those annotations would mark which part of the companies' datastores contain personal and other data based on degree of sensitivity. On a basic level, annotations should work like a custom tag or text descriptions that can be assigned to anything<br><br> 
+                            System needed to support annotations that can be assigned to any possible entity. Those annotations would mark which part of the companies' datastores contain personal and other data based on degree of sensitivity. On a basic level, annotations should work like a custom tag or text descriptions that can be assigned to anything<br><br> 
                             <b>FRONTEND</b><br>
-                            System needs a full CRUD support to manipulate with datastores and its properties via fast and usable UI.<br><br> 
+                            System needed a full CRUD support to manipulate with datastores via fast and usable UI.<br><br> 
                             <b>RESTFUL API</b><br>
-                            System needs to work through an API to isolate backend from frontend and provide easy-to-use functions to manipulate with the datastores.<br><br>
+                            System needed to work through an API to isolate backend from frontend and provide easy-to-use functions to manipulate with the datastores.<br><br>
                             <b>OPTIONAL FEATURES</b><br>
-                            Report generation, data anonymization, Hive metastore and data crawlers.
+                            Report generation on user's demand, data anonymization, Hive metastore and data crawlers.
                         </div>
                     </div> 
                     <div class="read-block" id="method">
@@ -120,9 +120,9 @@
                         </p>
                         <div class="read-text">
                             <ul>
-                                <li>Too much time being spent on pen&paper discussion and design of the universal data model and backend which led to a fairly late implementation phase.</li>
-                                <li>Sudden conflict between couple team members and health issues of our second frontend developer let to departure of 2 (out of 5) team members from the team and project. Project's requirements were slightly adjusted by communicating with the customer and work continued as before with 2 backend specialists and me as a frontend developer.</li>
-                                <li>Amount of technology that was new for team members and it that some took time to get familiar with.</li>
+                                <li>Too much time spent on pen&paper discussion and design of the universal data model and backend. This led to a fairly late implementation phase.</li>
+                                <li>Sudden conflict between couple team members and health issues of our second frontend developer let to departure of 2 (out of 5) team members from the team and project. Project's requirements were adjusted by closely communicating with the customer and work continued as before with 2 backend specialists and me as a frontend developer.</li>
+                                <li>Some technology was new for team members and it that some took time to get familiar with.</li>
                             </ul>
                         </div>
                     </div>
@@ -134,14 +134,14 @@
                             Despite the difficulties, team managed to deliver most of the backlog items, leaving optional items aside. Customer was impressed by our effort given the circumstances and result matched customer's vision of the project.<br><br>
                     
                             <b>BACKEND</b><br>
-                            Backend server can deployed via Docker on any Linux machine and it works with both PosgreSQL and MongoDB databases alongside with any types of files by using Entity Framework.<br><br>
+                            Backend server can deployed via Docker on any Linux machine and it works with both PosgreSQL and MongoDB databases alongside with any types of files by using Entity Framework. Documentation is also available via Swagger.<br><br>
                             
                             <b>FRONTEND</b><br>
                             Frontend supports CRUD (except UPDATE that was postponed due to the time cosntraints) and works with the backend server via RESTful API.<br><br>
                             
                             User interface consists of 5 main views: datastore view, datastore view, database view, schema view. User is able to perform entity related actions on relevant page (like adding a table is only possible on scheme page). Additionally, user is able to add necessary annotation or select one from the list of created ones and edit them on any page.<br><br>
                             
-                            Navigation  professively narrows down, starting from more of a global view to down to schema level: datastores list -> datastore -> database (last level for MongoDB) -> schema (last level for PostgreSQL). User is able to switch between views via breadcrumbs at the top left corner of the page.<br><br>
+                            Navigation  professively narrows down, starting from more of a global view down to schema level: datastores list -> datastore -> database (last level for MongoDB) -> schema (last level for PostgreSQL). User can to navigate between views via breadcrumbs at the top left corner of the page.<br><br>
                             
                             Example below shows the UI of the PostgreSQL schema that allows to manipulate with the tables, key relationships and annotations. 
                             <div class="image-preview">
