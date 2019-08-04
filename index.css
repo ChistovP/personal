@@ -153,6 +153,10 @@ html {
     background-color: #f9f9f9;
 }
 
+#comp-gover img:first-child{
+    opacity: 0.3;
+}
+
 #comp-gover .composition-title{
     color: black;
 }
@@ -169,6 +173,19 @@ html {
     opacity: 1;
     text-decoration:underline;
     transition: 200ms;
+}
+
+#customer #customer-link{
+    width: 100%;
+    text-align: center;
+}
+#customer #customer-link:hover{
+    opacity: 0.5;
+    transition: 200ms;
+}
+#customer #customer-link img{
+    width: 30%;
+    height: 100%;
 }
 /*----------------------*/
 .recommendation{
@@ -606,7 +623,7 @@ html {
 }
 
 .read-text ul{
-    margin: 0 10px 0 10px;
+    margin: 20px 10px 0 10px;
     padding: 10px;
     list-style: url(assets/list-icon.svg);
 }
@@ -1185,7 +1202,7 @@ html {
     }
 
     .read-text ul{
-        margin: 0 30px 0 30px;
+        margin: 20px 30px 0 30px;
         padding: 0;
     }
 

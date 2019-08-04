@@ -64,7 +64,7 @@
                             Problem
                         </p>
                         <div class="read-text" id="problem">
-                            There is a certain lack of a proper publicly available tool for digital bus transportation solutions as most of these solutions are developed by local transportation companies. In addition, there is also a lack of framework that software developers could use to understand some specifics and aspects of the bus travel experience and its technical environment.
+                            There is a certain lack of publicly available tools for digital bus transportation solutions as most of these solutions are developed by local transportation companies. In addition, there is also a lack of framework that software developers could use to quickly grasp the topic and understand some specifics and aspects of the bus travel experience and its technical environment.
                         </div>
                     </div>  
                     <div class="read-block">
@@ -72,12 +72,14 @@
                             Background
                         </p>
                         <div class="read-text">
-                            This project was a part of the <a href="http://livinglabbus.fi">Living Lab Bus</a> (LLB) that was focused on open data and public development tools in the context of public bus transportation. LLB is an open development platform that offers:
+                            This project was a part of the <a href="http://livinglabbus.fi">Living Lab Bus</a> (LLB), a research project conducted by VTT Technical Research Center and implemeted by Tampere University, Aalto University, Linkker, Foreca, HSL and other partners.<br><br>
+                            
+                            LLB was focused on open data and public development tools in the context of public bus transportation. Its open development platform offers:
                             <ul>
                                 <li>Fleet of 3 electric buses (heavily supplemented with sensors) operating in Helsinki, Finland on lines 23 and 55</li>
                                 <li>Set of APIs that allow to fetch sensor data from buses. Blob data API is used for historical data, while RESTful  API and MQTT - for real-time data. </li>
                                 <li><a href="https://llb.sis.uta.fi/portal" target="_blank">Developer Portal</a> and <a href="https://llb.sis.uta.fi/#/home" target="_blank">“Oma kokoelma”</a> (“Own Collection”) that serve as applications hub and API access point</li>
-                                <li>Bus Travel Experience Toolkit</li>
+                                <li><b>Bus Travel Experience Toolkit</b></li>
                             </ul>                        
                         </div>
                     </div>                    
@@ -104,7 +106,7 @@
                         </p>
                         <div class="read-text">
                             <ul>
-                                <li>Find out what kind of design materials can be considered useful for developers’ ideation
+                                <li>Find out what Toolkit's design materials can be considered useful for developers’ ideation
                             process in the context of bus transportation</li>
                                 <li>Find a suitable format of bus sensor data visualizations that can support and motivate developers to ideate</li>
                                 <li>Figure out how to combine Toolkit and visualizations and integrate them into Living Lab Bus platform in a format of a web portal</li>
@@ -113,10 +115,22 @@
                     </div>
                     <div class="read-block" id="method">
                         <p class="read-head">
-                            Research methodology
+                            Approach
                         </p>
                         <div class="read-text">
                             <img src="assets/bus/schedule.svg" />
+                        </div>
+                    </div>
+                    <div class="read-block" id="method">
+                        <p class="read-head">
+                            Obstacles and limitations
+                        </p>
+                        <div class="read-text">
+                            <ul>
+                                <li>Toolkit was used by some developers in the past during several code jams and junctions, but it didn't appeal to them much due to short project time and lack of proper introduction to it. Thus, there was a need for a proper developer studies for the purpose of exploring what and how developers are percieving and using the Toolkit.</li>
+                                <li>Lack of backend infrastructure and expertise within the LLB for this project. Therefore, any performance-heavy visualization like real-time charts was not an option.</li>
+                                <li>Timing for the first phase was not great (June) as many of potential participants were planning or already were on vacation.</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="read-block">
@@ -127,7 +141,7 @@
                             <b>GOAL</b><br>
                             Exploration of Toolkit's attribute space. Discovery of the artifacts related to format and usage of the Toolkit by developers. Sensor data visualization format exploration.<br><br>
                             <b>DESCRIPTION</b><br>
-                            Two different scenarios of Toolkit usage and wireframes for each story. Both scenarios were introduced to 10 software developers. Idea behind scenarios was to check the assumptions in 2 cases:  a fictional developer that has some vague idea about his future project and other developer that has no context for his future work.<br><br>
+                            Two different scenarios of Toolkit usage and wireframes for each story. Both scenarios were introduced to 10 software developers from Tampere University. Idea behind scenarios was to explore 2 major cases:  a fictional developer that has some vague idea about his future bus related project and other developer that has no context for his future work.<br><br>
                             Developers also got a chance to take a look at the current Toolkit materials in physical format to get their opinion on it. After that, they were interview in regard of the stories and Toolkit's properties.
                             
                             <br><br>
@@ -148,7 +162,7 @@
                             <ul>
                                 <li>Presence of the LLB API within proposed wireframes set unnecesary expectations from the Toolkit. E.g. developers thought that Toolkit would supplement or advertise the API instead of presenting a value on its own. </li>
                                 <li>Lack of easily available research data to back the Toolkit also resulted in developers simply underestimating the value of it.</li>
-                                <li>Terminology, tools titles and format of the Toolkit was confusing for the developers as most of them had no prior experience with them or their types. Personas caused most of the perception issues, while Context Cards and Passenger Journey Map were the most usable for developers.</li>
+                                <li>Terminology, tools titles and format of the Toolkit were confusing for the developers as most of them had no prior experience with them or their types. Personas caused most of the perception issues, while Context Cards and Passenger Journey Map were the most usable for developers.</li>
                                 <li>Developers expected traditional data visualizations such as maps, parameter values and charts instead of generated text.</li>
                             </ul>
                             
@@ -168,7 +182,7 @@
                             </ul>
                             <br>
                             <b>SENSOR DATA VISUALIZATIONS</b><br>
-                            Given the inspirational nature of this work, visualizations were never meant to be a research or a data analysis tool. Thus, datavis took form of a map with locational data of some of the LLB buses and sensor parameters values. Data visualizations also served as an example of what can be done with the LLB API.
+                            Given the inspirational nature of this work, visualizations were never meant to be a research or a data analysis tool. With aforementioned constraints in mind, datavis took form of a map with locational data of some of the LLB buses and sensor parameters values. Data visualizations also served as an example of what can be done with the LLB API.
                             <br><br>
                             <b>ORIGINAL FLOWCHART</b><br>
                             This flowchart demonstrates first attempt to look at overall integration of the future Toolkit Portal and its structure.
@@ -277,7 +291,7 @@
                     </div>
                     <div class="read-block">
                         <p class="read-head">
-                            REFLECTIONS
+                            Reflection
                         </p>
                         <div class="read-text">
                             <ul>

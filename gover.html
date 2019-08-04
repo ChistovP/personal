@@ -21,7 +21,7 @@
                 <a href="assets/cv_pavelchistov.pdf"  id="download-cv"  target="_blank">Download CV (.pdf)</a>
             </div>
             <div class="content">
-<!--                <div class="block-title"><a name="mywork">&nbsp;</a><p>System for Data Governance</p></div>
+                <div class="block-title"><a name="mywork">&nbsp;</a><p>System for Data Governance</p></div>
                 <div class="composition" id="comp-gover">
                     <img src="assets/gover/gover-icon.svg" />
                     <div class="composition-block" >
@@ -36,7 +36,7 @@
                         </div>
                        
                         <div class="composition-text">
-                            Project Manager, UX Expert, Frontend Developer
+                            Project Manager, Frontend Developer
                         </div>
                         <div class="composition-title">
                             TOOLS
@@ -67,13 +67,19 @@
                             GDPR (General Data Protection Regulation) was implemented in May 2018 and caused a lot of controversy for companies operating in EU. Companies are in need for some consistent solution to check their compliance with GDPR.
                         </div>
                     </div>  
-                    <div class="read-block">
+                    <div class="read-block" id="customer">
                         <p class="read-head">
                             Customer
                         </p>
                         <div class="read-text">
-                            <img src="assets/gover/intopalo-logo.png" />                       
+                            <div id="customer-link">
+                                <a href="https://www.intopalo.com" target="_blank"><img src="assets/gover/intopalo-logo.png" /></a>
+                            </div><br>
+                            <b>INTOPALO DIGITAL</b> <br>
+                            Software development company based in Tampere, Finland and Munich, Germany. It is focused on data management, security, web and cloud technology.
                         </div>
+                        
+
                     </div>   
                     <div class="read-block">
                         <p class="read-head" >
@@ -92,37 +98,78 @@
                             Approach
                         </p>
                         <div class="read-text">
+                            <b>PLANNING</b><br>
+                            Project consists of 5 sprints that varied from 2 to 3 weeks. Weekly face-to-face meetings / co-design sessions and WhatsApp conversations were the main interal communication channels.<br><br>
                             <b>UNIVERSAL METADATA MODEL</b><br>
-                             Model should contain metadata of datastores and work accross several datastore types - relational and non-relational. (PostgreSQL and MongoDB). Modle also needs to work with structured and unstructured files.<br><br> 
-                            <b>OPEN SOURCE (MIT LICENSE)</b><br>
-                            Porject will be developed further by the company and by other interested developers.<br><br>    
+                             Model should contain metadata of datastores and work accross several datastore types - relational and non-relational (PostgreSQL and MongoDB). Model also needs to work with structured and unstructured files.<br><br> 
+                            <b>OPEN SOURCE</b><br>
+                            Project should be developed under MIT license.<br><br>    
                             <b>GDPR ANNOTATIONS</b><br>
-                            System needs to support annotations that can be assigned to any possible entity. Those annotations would mark which part of the companies' datastores contain personal and other data based on degree of sensitivity.<br><br> 
+                            System needs to support annotations that can be assigned to any possible entity. Those annotations would mark which part of the companies' datastores contain personal and other data based on degree of sensitivity. On a basic level, annotations should work like a custom tag or text descriptions that can be assigned to anything<br><br> 
                             <b>FRONTEND</b><br>
                             System needs a full CRUD support to manipulate with datastores and its properties via fast and usable UI.<br><br> 
                             <b>RESTFUL API</b><br>
-                            System needs to work through an API to isolate backend from frontend and provide easy-to-use functions to manipulate with the datastores.
+                            System needs to work through an API to isolate backend from frontend and provide easy-to-use functions to manipulate with the datastores.<br><br>
+                            <b>OPTIONAL FEATURES</b><br>
+                            Backlog was created based on the items mentioned above alongside with some optional features like report generation, data anonymization, Hive metastore and data crawlers.
                         </div>
-                    </div>                    
+                    </div> 
+                    <div class="read-block" id="method">
+                        <p class="read-head">
+                            Obstacles and limitations
+                        </p>
+                        <div class="read-text">
+                            <ul>
+                                <li>Too much time being spent on pen&paper discussion and design of the universal data model and backend which led to a fairly late implementation phase.</li>
+                                <li>Sudden conflict between couple team members and health issues of our second frontend developer let to departure of 2 (out of 5) team members from the team and project. Project's requirements were slightly adjusted by communicating with the customer and work continued as before with 2 backend specialists and me as a frontend developer.</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="read-block">
                         <p class="read-head">
-                            Phase 1 - Scenario evaluation
+                            Result
                         </p>
                         <div class="read-text"> 
+                            Despite the difficulties, team managed to deliver most of the backlog items, leaving optional items aside. Customer was impressed by our effort given the circumstances and result matched customer's vision of the project.<br><br>
+                    
+                            <b>BACKEND</b><br>
+                            Backend server can deployed via Docker on any Linux machine and it works with both PosgreSQL and MongoDB databases alongside with any types of files by using Entity Framework.<br><br>
+                            
+                            <b>FRONTEND</b><br>
+                            Frontend supports CRUD (except UPDATE that was postponed due to the time cosntraints) and works with the backend server via RESTful API.<br><br>
+                            
+                            User interface consists of 5 main views: datastore view, datastore view, database view, schema view. User is able to perform entity related actions on relevant page (like adding a table is only possible on scheme page). Additionally, user is able to add necessary annotation or select one from the list of created ones and edit them on any page.<br><br>
+                            
+                            Navigation  professively narrows down, starting from more of a global view to down to schema level: datastores list -> datastore -> database (last level for MongoDB) -> schema (last level for PostgreSQL). User is able to switch between views via breadcrumbs at the top left corner of the page.<br><br>
+                            
+                            Example below shows the UI of the PostgreSQL schema that allows to manipulate with the tables, key relationships and annotations. 
                             <div class="image-preview">
-                                <p>VIEW WIREFRAMES</p>
-                                <a href="assets/bus/wf1.png" target="_blank"><img src="assets/bus/wf1.png" id="wf"/></a>
+                                <p>VIEW SCHEMA PAGE</p>
+                                <a href="assets/gover/ex1.png" target="_blank"><img src="assets/gover/ex1.png" id="wf"/></a>
+                            </div> 
+                            <div class="image-preview">
+                                <p>VIEW SCHEMA PAGE WITH ANNOTATIONS</p>
+                                <a href="assets/gover/ex2.png" target="_blank"><img src="assets/gover/ex2.png" id="wf"/></a>
                             </div>
-                           
+                            Deletion of key relationships and fields is a separate mode that can be enabled for each table separately.
+                            <div class="image-preview">
+                                <p>VIEW DELETION MODE</p>
+                                <a href="assets/gover/ex3.png" target="_blank"><img src="assets/gover/ex3.png" id="wf"/></a>
+                            </div>
+                            
+                            <a href="https://github.com/intopalo/data-governance-tool" target="_blank" id="result-link">AVAILABLE ON GITHUB</a>
                         </div>
                     </div>
 
-                </div>-->
+                </div>
                 <div id="about">
                     <div class="about-content" id="project-about">
-                        <p class="block-title" id="contacts-title">Page is under construction</p>
+                        <p class="block-title" id="contacts-title">Feel free to contact  me!</p>
                         <div class="about-contacts">
-                            <a href="index.html" id="email">Back to main page</a> 
+                            <a href="mailto:pavelchistovux@gmail.com" id="email">pavelchistovux@gmail.com</a> 
+                            <a href="https://www.linkedin.com/in/pavel-chistov/" id="linkedin" target="_blank">LinkedIn</a> 
+                            <a href="https://www.artstation.com/pateytos" id="artstation" target="_blank">ArtStation</a> 
+                            <a href="https://www.behance.net/pavelchistov" id="behance" target="_blank">Behance</a> 
                         </div>
                     </div>
                 </div>
