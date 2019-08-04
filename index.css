@@ -538,6 +538,7 @@ html {
 .about-general{
     text-align: justify;
     font-size: 0.8em;
+    margin: 0 20px 0 20px;
 }    
 
 .about-contacts{
@@ -734,7 +735,7 @@ html {
         text-align: center;
         grid-area: hero;
         display: grid;
-        grid-template-columns: 700px;
+        grid-template-columns: 1030px;
         grid-template-rows: 400px;
         justify-content: center;
         align-items:center;
@@ -1097,7 +1098,7 @@ html {
     
     #about{
         display:grid;
-        grid-template-columns: 700px;
+        grid-template-columns: 1030px;
         grid-template-rows: auto;
         margin: 0 0 0px 0;
         padding: 0;
@@ -1174,7 +1175,19 @@ html {
         color:#1a408b;
         font-weight: 300;
     }
-    
+    #about-page{
+                display:grid;
+        grid-template-columns: 700px;
+        grid-template-rows: auto;
+        margin: 0 0 0px 0;
+        padding: 0;
+        justify-content: center;
+        grid-template-areas: 
+            "block-title block-title"
+            "about-content about-content";
+        animation-name: init;
+        animation-duration: 0.7s;
+    }
     
     /*---------------------------------------------------------*/
     .read{
